@@ -1,9 +1,9 @@
 package testapp.data;
 
 public class Test {
-    private  int id;
+    private int id;
     private String test;
-    private  boolean thing;
+    private boolean thing;
 
     public Test() {
     }
