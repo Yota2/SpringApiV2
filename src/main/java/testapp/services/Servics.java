@@ -39,6 +39,10 @@ public Test getTestById(String  test){
         }
     }
     }
+//deleting
+    public void deletTest(String test, Test tests) {
+  testss.removeIf(t->t.getTest().equals(test));
+    }
 /*public void addTest(Test test){
     tests.add(test);
 }

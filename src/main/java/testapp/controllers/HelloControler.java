@@ -47,7 +47,10 @@ public class HelloControler {
             servics.updateTest(test , tests);
         }
         //deleting request
-
+        @RequestMapping(method=RequestMethod.DELETE, value="/services/{test}")
+        public void deletingTest(@RequestBody Test tests  , @PathVariable String  test){
+            servics.deletTest(test , tests);
+        }
     }
 
     }
