@@ -25,11 +25,11 @@ public Test getTestById(String  test){
     //if we need to use to filter by Id or int
   // return ( tests.stream().filter(t ->t.toString().equals(id)).findFirst().get());
 }
-
+//Adding filed
     public void addTest(Test test) {
     testss.add(test);
     }
-
+//Updating
     public void updateTest(String test, Test tests) {
     for (int i = 0; i<testss.size();i++){
         Test t = testss.get(i);
@@ -43,10 +43,8 @@ public Test getTestById(String  test){
     public void deletTest(String test, Test tests) {
   testss.removeIf(t->t.getTest().equals(test));
     }
-/*public void addTest(Test test){
-    tests.add(test);
-}
- */
+
+
 }
 
 

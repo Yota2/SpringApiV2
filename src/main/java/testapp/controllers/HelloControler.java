@@ -30,23 +30,25 @@ public class HelloControler {
         public List<Test> getAllServics(){
             return servics.getAllservics();
         }
-        //Getting by single  Input by String Name Mapping By Id
+
+        //Getting by single  Input by String Name Mapping By Id.
         @RequestMapping("/services/{test}")
        public Test getByTestId (@PathVariable String  test){
             return servics.getTestById(test);
        }
-       //Posting request
+
+       //Posting creating  request in order to create new filed.
        @RequestMapping(method=RequestMethod.POST, value="/services")
        public void addTest(@RequestBody Test test ){
          servics.addTest(test);
        }
 
-        //Updating  request
+        //Updating  request changing and modifying existing data.)
         @RequestMapping(method=RequestMethod.PUT, value="/services/{test}")
         public void updateTest(@RequestBody Test tests  , @PathVariable String  test){
             servics.updateTest(test , tests);
         }
-        //deleting request
+        //Deleting request.
         @RequestMapping(method=RequestMethod.DELETE, value="/services/{test}")
         public void deletingTest(@RequestBody Test tests  , @PathVariable String  test){
             servics.deletTest(test , tests);
